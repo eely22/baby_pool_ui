@@ -6,12 +6,19 @@ class EntryList extends React.Component {
             <div>
                 {this.props.entrants.map((entry) =>
                     <div key={entry.email} >
-                        <p>{entry.name}</p>
-                        <p>{entry.date}</p>
-                        <p>{entry.sex}</p>
-                        <p>{entry.weight}  - {entry.length}</p>
-                        <p><i>{entry.comment}</i></p>
-
+                        <div className="row">
+                            <div className="col-xs-4">
+                                <p>{entry.name}</p>
+                                <p>{entry.date}</p>
+                            </div>
+                            <div className="col-xs-4">
+                                <p>{entry.sex}</p>
+                                <p>{entry.weight}  - {entry.length}</p>
+                            </div>
+                            <div className="col-xs-4">
+                                <p><i>{entry.comment}</i></p>
+                            </div>
+                        </div>
                         <hr/>
                     </div>
                 )}
